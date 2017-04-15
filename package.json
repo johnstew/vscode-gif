@@ -37,8 +37,10 @@
   },
   "dependencies": {
     "handlebars": "^4.0.6",
+    "mkdirp": "^0.5.1",
     "request": "^2.81.0",
     "request-promise": "^4.2.0",
+    "rimraf": "^2.6.1",
     "uuid": "^3.0.1"
   }
 }

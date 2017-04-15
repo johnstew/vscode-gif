@@ -59,7 +59,7 @@ class Giphy {
 
     writePage(template): Promise<string> {
         return new Promise((resolve, reject) => {
-            const filePath = `${__dirname}/${this.getId()}-giphy-preview-${this._type}.html`;
+            const filePath = `${__dirname}/giphy/${this.getId()}-giphy-preview-${this._type}.html`;
             fs.writeFile(filePath, template, (error) => {
                 if (error) {
                     reject(error);
