@@ -2,13 +2,14 @@
 
 import * as vscode from 'vscode';
 import Giphy from './giphy';
+import types from './types';
 const rimraf = require('rimraf');
 const mkdirp = require('mkdirp');
 const cache: object = {};
 
-function previewTrending(): void {
-    const giphyTrending = new Giphy('trending');
-    giphyTrending.generatePage()
+function preview(type): void {
+    const giphy = new Giphy(type);
+    giphy.generatePage()
         .then((pagePath) => {
             const pageUri = vscode.Uri.parse(`file://${pagePath}`);
             cache[pagePath] = true;
@@ -16,7 +17,7 @@ function previewTrending(): void {
         })
         .then((success) => {
             if (success) {
-                console.log('GIPHY Trending Created.');
+                console.log(`GIPHY:${type} Created.`);
             }
         })
         .catch((error) => {
@@ -48,12 +49,11 @@ function cleanUp(pagePath): Promise<boolean> {
 
 export function activate(context: vscode.ExtensionContext) {
     createGifDir();
-
-    let giphyTrendingDisposable = vscode.commands.registerCommand('giphy.trending', () => {
-        previewTrending();
+    
+    Object.keys(types).forEach((type) => {
+        const disposable = vscode.commands.registerCommand(`giphy.${type}`, () => preview(type));
+        context.subscriptions.push(disposable);
     });
-
-    context.subscriptions.push(giphyTrendingDisposable);
 }
 
 export function deactivate() {

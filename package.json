@@ -11,7 +11,29 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:giphy.trending"
+    "onCommand:giphy.trending",
+    "onCommand:giphy.agree",
+    "onCommand:giphy.awww",
+    "onCommand:giphy.dance",
+    "onCommand:giphy.deal",
+    "onCommand:giphy.eww",
+    "onCommand:giphy.facepalm",
+    "onCommand:giphy.fist",
+    "onCommand:giphy.gl",
+    "onCommand:giphy.bye",
+    "onCommand:giphy.hug",
+    "onCommand:giphy.idk",
+    "onCommand:giphy.no",
+    "onCommand:giphy.omg",
+    "onCommand:giphy.mic",
+    "onCommand:giphy.please",
+    "onCommand:giphy.oops",
+    "onCommand:giphy.seriously",
+    "onCommand:giphy.shocked",
+    "onCommand:giphy.shrug",
+    "onCommand:giphy.sorry",
+    "onCommand:giphy.thanks",
+    "onCommand:giphy.yes"
   ],
   "main": "./out/src/main",
   "contributes": {
@@ -19,6 +41,94 @@
       {
         "command": "giphy.trending",
         "title": "GIPHY Trending"
+      },
+      {
+        "command": "giphy.agree",
+        "title": "GIPHY Agree"
+      },
+      {
+        "command": "giphy.aww",
+        "title": "GIPHY Aww"
+      },
+      {
+        "command": "giphy.dance",
+        "title": "GIPHY Dance"
+      },
+      {
+        "command": "giphy.deal",
+        "title": "GIPHY Deal"
+      },
+      {
+        "command": "giphy.eww",
+        "title": "GIPHY Eww"
+      },
+      {
+        "command": "giphy.facepalm",
+        "title": "GIPHY Facepalm"
+      },
+      {
+        "command": "giphy.fist",
+        "title": "GIPHY Fist"
+      },
+      {
+        "command": "giphy.gl",
+        "title": "GIPHY Good Luck"
+      },
+      {
+        "command": "giphy.bye",
+        "title": "GIPHY Bye"
+      },
+      {
+        "command": "giphy.hug",
+        "title": "GIPHY Hug"
+      },
+      {
+        "command": "giphy.idk",
+        "title": "GIPHY Idk"
+      },
+      {
+        "command": "giphy.no",
+        "title": "GIPHY No"
+      },
+      {
+        "command": "giphy.omg",
+        "title": "GIPHY Omg"
+      },
+      {
+        "command": "giphy.mic",
+        "title": "GIPHY Mic Drop"
+      },
+      {
+        "command": "giphy.please",
+        "title": "GIPHY Please"
+      },
+      {
+        "command": "giphy.oops",
+        "title": "GIPHY Oops"
+      },
+      {
+        "command": "giphy.seriously",
+        "title": "GIPHY Seriously"
+      },
+      {
+        "command": "giphy.shocked",
+        "title": "GIPHY Shocked"
+      },
+      {
+        "command": "giphy.shrug",
+        "title": "GIPHY Shrug"
+      },
+      {
+        "command": "giphy.sorry",
+        "title": "GIPHY Sorry"
+      },
+      {
+        "command": "giphy.thanks",
+        "title": "GIPHY Thanks"
+      },
+      {
+        "command": "giphy.yes",
+        "title": "GIPHY Yes"
       }
     ]
   },

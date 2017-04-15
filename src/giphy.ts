@@ -10,7 +10,29 @@ class Giphy {
     constructor(type = 'trending') {
         this._type = type;
         this._url = {
-            trending: 'http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC'
+            trending: 'http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC',
+            agree: 'http://api.giphy.com/v1/gifs/search?q=agree&api_key=dc6zaTOxFJmzC',
+            awww: 'http://api.giphy.com/v1/gifs/search?q=awww&api_key=dc6zaTOxFJmzC',
+            dance: 'http://api.giphy.com/v1/gifs/search?q=dance&api_key=dc6zaTOxFJmzC',
+            deal: 'http://api.giphy.com/v1/gifs/search?q=deal+with+it&api_key=dc6zaTOxFJmzC',
+            eww: 'http://api.giphy.com/v1/gifs/search?q=eww&api_key=dc6zaTOxFJmzC',
+            facepalm: 'http://api.giphy.com/v1/gifs/search?q=facepalm&api_key=dc6zaTOxFJmzC',
+            fist: 'http://api.giphy.com/v1/gifs/search?q=fist+bump&api_key=dc6zaTOxFJmzC',
+            gl: 'http://api.giphy.com/v1/gifs/search?q=gl&api_key=dc6zaTOxFJmzC',
+            bye: 'http://api.giphy.com/v1/gifs/search?q=goodbye&api_key=dc6zaTOxFJmzC',
+            hug: 'http://api.giphy.com/v1/gifs/search?q=hug&api_key=dc6zaTOxFJmzC',
+            idk: 'http://api.giphy.com/v1/gifs/search?q=idk&api_key=dc6zaTOxFJmzC',
+            no: 'http://api.giphy.com/v1/gifs/search?q=no&api_key=dc6zaTOxFJmzC',
+            omg: 'http://api.giphy.com/v1/gifs/search?q=omg&api_key=dc6zaTOxFJmzC',
+            mic: 'http://api.giphy.com/v1/gifs/search?q=mic+drop&api_key=dc6zaTOxFJmzC',
+            please: 'http://api.giphy.com/v1/gifs/search?q=please&api_key=dc6zaTOxFJmzC',
+            oops: 'http://api.giphy.com/v1/gifs/search?q=oops&api_key=dc6zaTOxFJmzC',
+            seriously: 'http://api.giphy.com/v1/gifs/search?q=seriously&api_key=dc6zaTOxFJmzC',
+            shocked: 'http://api.giphy.com/v1/gifs/search?q=shocked&api_key=dc6zaTOxFJmzC',
+            shrug: 'http://api.giphy.com/v1/gifs/search?q=shrug&api_key=dc6zaTOxFJmzC',
+            sorry: 'http://api.giphy.com/v1/gifs/search?q=sorry&api_key=dc6zaTOxFJmzC',
+            thanks: 'http://api.giphy.com/v1/gifs/search?q=thanks&api_key=dc6zaTOxFJmzC',
+            yes: 'http://api.giphy.com/v1/gifs/search?q=yes&api_key=dc6zaTOxFJmzC'
         };
     }
 
