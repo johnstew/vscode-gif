@@ -1,5 +1,5 @@
 # Change Log
-All notable changes to the "giphy" extension will be documented in this file.
+All notable changes to the "gif" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 

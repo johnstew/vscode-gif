@@ -1,6 +1,6 @@
 {
-  "name": "giphy",
-  "displayName": "giphy",
+  "name": "gif",
+  "displayName": "gif",
   "description": "Easily grab a gif from within VS Code to add your to docs, presentations, etc.",
   "version": "0.0.1",
   "publisher": "jstewart",
@@ -11,135 +11,135 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:giphy.trending",
-    "onCommand:giphy.agree",
-    "onCommand:giphy.awww",
-    "onCommand:giphy.dance",
-    "onCommand:giphy.deal",
-    "onCommand:giphy.eww",
-    "onCommand:giphy.facepalm",
-    "onCommand:giphy.fist",
-    "onCommand:giphy.gl",
-    "onCommand:giphy.bye",
-    "onCommand:giphy.hug",
-    "onCommand:giphy.idk",
-    "onCommand:giphy.no",
-    "onCommand:giphy.omg",
-    "onCommand:giphy.mic",
-    "onCommand:giphy.please",
-    "onCommand:giphy.oops",
-    "onCommand:giphy.seriously",
-    "onCommand:giphy.shocked",
-    "onCommand:giphy.shrug",
-    "onCommand:giphy.sorry",
-    "onCommand:giphy.thanks",
-    "onCommand:giphy.yes"
+    "onCommand:gif.trending",
+    "onCommand:gif.agree",
+    "onCommand:gif.awww",
+    "onCommand:gif.dance",
+    "onCommand:gif.deal",
+    "onCommand:gif.eww",
+    "onCommand:gif.facepalm",
+    "onCommand:gif.fist",
+    "onCommand:gif.gl",
+    "onCommand:gif.bye",
+    "onCommand:gif.hug",
+    "onCommand:gif.idk",
+    "onCommand:gif.no",
+    "onCommand:gif.omg",
+    "onCommand:gif.mic",
+    "onCommand:gif.please",
+    "onCommand:gif.oops",
+    "onCommand:gif.seriously",
+    "onCommand:gif.shocked",
+    "onCommand:gif.shrug",
+    "onCommand:gif.sorry",
+    "onCommand:gif.thanks",
+    "onCommand:gif.yes"
   ],
   "main": "./out/src/main",
   "contributes": {
     "configuration": {
         "type": "object",
-        "title": "GIPHY configuration",
+        "title": "GIF configuration",
         "properties": {
-            "giphy.rating": {
+            "gif.rating": {
                 "type": "string",
                 "default": "pg-13",
-                "description": "Specify the rating you would like to use for GIPHY results."
+                "description": "Specify the rating you would like to use for GIF results."
             }
         }
     },
     "commands": [
       {
-        "command": "giphy.trending",
-        "title": "GIPHY Trending"
+        "command": "gif.trending",
+        "title": "GIF Trending"
       },
       {
-        "command": "giphy.agree",
-        "title": "GIPHY Agree"
+        "command": "gif.agree",
+        "title": "GIF Agree"
       },
       {
-        "command": "giphy.aww",
-        "title": "GIPHY Aww"
+        "command": "gif.aww",
+        "title": "GIF Aww"
       },
       {
-        "command": "giphy.dance",
-        "title": "GIPHY Dance"
+        "command": "gif.dance",
+        "title": "GIF Dance"
       },
       {
-        "command": "giphy.deal",
-        "title": "GIPHY Deal"
+        "command": "gif.deal",
+        "title": "GIF Deal"
       },
       {
-        "command": "giphy.eww",
-        "title": "GIPHY Eww"
+        "command": "gif.eww",
+        "title": "GIF Eww"
       },
       {
-        "command": "giphy.facepalm",
-        "title": "GIPHY Facepalm"
+        "command": "gif.facepalm",
+        "title": "GIF Facepalm"
       },
       {
-        "command": "giphy.fist",
-        "title": "GIPHY Fist"
+        "command": "gif.fist",
+        "title": "GIF Fist"
       },
       {
-        "command": "giphy.gl",
-        "title": "GIPHY Good Luck"
+        "command": "gif.gl",
+        "title": "GIF Good Luck"
       },
       {
-        "command": "giphy.bye",
-        "title": "GIPHY Bye"
+        "command": "gif.bye",
+        "title": "GIF Bye"
       },
       {
-        "command": "giphy.hug",
-        "title": "GIPHY Hug"
+        "command": "gif.hug",
+        "title": "GIF Hug"
       },
       {
-        "command": "giphy.idk",
-        "title": "GIPHY Idk"
+        "command": "gif.idk",
+        "title": "GIF Idk"
       },
       {
-        "command": "giphy.no",
-        "title": "GIPHY No"
+        "command": "gif.no",
+        "title": "GIF No"
       },
       {
-        "command": "giphy.omg",
-        "title": "GIPHY Omg"
+        "command": "gif.omg",
+        "title": "GIF Omg"
       },
       {
-        "command": "giphy.mic",
-        "title": "GIPHY Mic Drop"
+        "command": "gif.mic",
+        "title": "GIF Mic Drop"
       },
       {
-        "command": "giphy.please",
-        "title": "GIPHY Please"
+        "command": "gif.please",
+        "title": "GIF Please"
       },
       {
-        "command": "giphy.oops",
-        "title": "GIPHY Oops"
+        "command": "gif.oops",
+        "title": "GIF Oops"
       },
       {
-        "command": "giphy.seriously",
-        "title": "GIPHY Seriously"
+        "command": "gif.seriously",
+        "title": "GIF Seriously"
       },
       {
-        "command": "giphy.shocked",
-        "title": "GIPHY Shocked"
+        "command": "gif.shocked",
+        "title": "GIF Shocked"
       },
       {
-        "command": "giphy.shrug",
-        "title": "GIPHY Shrug"
+        "command": "gif.shrug",
+        "title": "GIF Shrug"
       },
       {
-        "command": "giphy.sorry",
-        "title": "GIPHY Sorry"
+        "command": "gif.sorry",
+        "title": "GIF Sorry"
       },
       {
-        "command": "giphy.thanks",
-        "title": "GIPHY Thanks"
+        "command": "gif.thanks",
+        "title": "GIF Thanks"
       },
       {
-        "command": "giphy.yes",
-        "title": "GIPHY Yes"
+        "command": "gif.yes",
+        "title": "GIF Yes"
       }
     ]
   },

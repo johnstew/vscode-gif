@@ -1,15 +1,15 @@
 'use strict';
 
 import * as vscode from 'vscode';
-import Giphy from './giphy';
+import Gif from './gif';
 import types from './types';
 const rimraf = require('rimraf');
 const mkdirp = require('mkdirp');
 const cache: object = {};
 
 function preview(type): void {
-    const giphy = new Giphy(type);
-    giphy.generatePage()
+    const gif = new Gif(type);
+    gif.generatePage()
         .then((pagePath) => {
             const pageUri = vscode.Uri.parse(`file://${pagePath}`);
             cache[pagePath] = true;
@@ -17,7 +17,7 @@ function preview(type): void {
         })
         .then((success) => {
             if (success) {
-                console.log(`GIPHY:${type} Created.`);
+                console.log(`GIF:${type} Created.`);
             }
         })
         .catch((error) => {
@@ -27,7 +27,7 @@ function preview(type): void {
 
 function createGifDir(): Promise<boolean> {
     return new Promise((resolve, reject) => {
-        mkdirp(`${__dirname}/giphy`, function (error) {
+        mkdirp(`${__dirname}/gif`, function (error) {
             if (error) {
                 reject(error);
             }
@@ -51,7 +51,7 @@ export function activate(context: vscode.ExtensionContext) {
     createGifDir();
     
     Object.keys(types).forEach((type) => {
-        const disposable = vscode.commands.registerCommand(`giphy.${type}`, () => preview(type));
+        const disposable = vscode.commands.registerCommand(`gif.${type}`, () => preview(type));
         context.subscriptions.push(disposable);
     });
 }
@@ -64,7 +64,7 @@ export function deactivate() {
     });
     Promise.all(cleanUpPromises)
         .then((results) => {
-            console.log('GIPHY Clean Up.');
+            console.log('GIF Clean Up.');
         })
         .catch((error) => {
             console.log(error);

@@ -1,6 +1,6 @@
-# giphy README
+# GIF README
 
-This is the README for your extension "giphy". After writing up a brief description, we recommend including the following sections.
+This is the README for your extension "gif". After writing up a brief description, we recommend including the following sections.
 
 ## Features
 

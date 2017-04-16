@@ -4,14 +4,14 @@ const Handlebars = require('handlebars');
 const fs = require('fs');
 const uuidV4 = require('uuid/v4');
 
-class Giphy {
+class Gif {
     private _url: object;
     private _type: string;
     private _settings: any;
     private _rating: string;
 
     constructor(type = 'trending') {
-        this._settings = workspace.getConfiguration('giphy');
+        this._settings = workspace.getConfiguration('gif');
         this._rating = this._settings.get('rating');
         this._type = type;
         this._url = {
@@ -59,21 +59,21 @@ class Giphy {
             '<style>',
             'h1 { margin: 20px 10px; }',
             '.small { font-size: 16px }',
-            '.giphy-container { display: flex; width: 100%; height: 100%; flex-direction: row; justify-content: stretch; align-items: flex-start;flex-wrap: wrap; }',
-            '.giphy-item { display: block; width: auto; height: 250px; margin: 0 10px; }',
-            '.giphy-item__img-container { display: block; width: 100%; height: auto; }',
-            '.giphy-item__img-container img { display: block; max-width: 100%; height: auto; }',
-            '.giphy-item__url-container { display: flex; align-items: center; height: 30px; }',
-            '.giphy-item__url-container input { display: block; width: 100%; border: 1px solid #DDD; height: 30px; padding: 0 10px;}',
+            '.gif-container { display: flex; width: 100%; height: 100%; flex-direction: row; justify-content: stretch; align-items: flex-start;flex-wrap: wrap; }',
+            '.gif-item { display: block; width: auto; height: 250px; margin: 0 10px; }',
+            '.gif-item__img-container { display: block; width: 100%; height: auto; }',
+            '.gif-item__img-container img { display: block; max-width: 100%; height: auto; }',
+            '.gif-item__url-container { display: flex; align-items: center; height: 30px; }',
+            '.gif-item__url-container input { display: block; width: 100%; border: 1px solid #DDD; height: 30px; padding: 0 10px;}',
             '</style>',
             '<h1><span class="small">powered by</span> GIPHY</h1>',
-            '<main class="giphy-container">',
-                '{{#each giphyResults}}',
-                    '<div class="giphy-item" style="width: {{this.images.fixed_height.width}}px;">',
-                        '<div class="giphy-item__img-container">',
+            '<main class="gif-container">',
+                '{{#each gifResults}}',
+                    '<div class="gif-item" style="width: {{this.images.fixed_height.width}}px;">',
+                        '<div class="gif-item__img-container">',
                             '<img src="{{this.images.fixed_height.url}}"/>',
                         '</div>',
-                        '<div class="giphy-item__url-container">',
+                        '<div class="gif-item__url-container">',
                             '<input type="text" value="https://media.giphy.com/media/{{this.id}}/giphy.gif" />',
                         '</div>',
                     '</div>',
@@ -88,7 +88,7 @@ class Giphy {
 
     writePage(template): Promise<string> {
         return new Promise((resolve, reject) => {
-            const filePath = `${__dirname}/giphy/${this.getId()}-giphy-preview-${this._type}.html`;
+            const filePath = `${__dirname}/gif/${this.getId()}-gif-preview-${this._type}.html`;
             fs.writeFile(filePath, template, (error) => {
                 if (error) {
                     reject(error);
@@ -101,16 +101,17 @@ class Giphy {
     setRating(): void {
         Object.keys(this._url).forEach((url) => {
             this._url[url] = `${this._url[url]}&rating=${this._rating}`;
+            console.log(this._url[url]);
         });
     }
 
     async generatePage(): Promise<string> {
-        const giphyResults = await this.getGifs();
-        const giphyPreviewTemplate = this.getTemplate();
-        const compiledGiphyTemplate = Handlebars.compile(giphyPreviewTemplate);
-        const dataTemplate = compiledGiphyTemplate({ giphyResults: giphyResults['data'] });
+        const gifResults = await this.getGifs();
+        const gifPreviewTemplate = this.getTemplate();
+        const compiledGifTemplate = Handlebars.compile(gifPreviewTemplate);
+        const dataTemplate = compiledGifTemplate({ gifResults: gifResults['data'] });
         return this.writePage(dataTemplate);
     }
 }
 
-export default Giphy;
+export default Gif;
