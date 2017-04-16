@@ -1,3 +1,4 @@
+import { workspace } from 'vscode' ;
 const request = require('request');
 const Handlebars = require('handlebars');
 const fs = require('fs');
@@ -6,8 +7,12 @@ const uuidV4 = require('uuid/v4');
 class Giphy {
     private _url: object;
     private _type: string;
+    private _settings: any;
+    private _rating: string;
 
     constructor(type = 'trending') {
+        this._settings = workspace.getConfiguration('giphy');
+        this._rating = this._settings.get('rating');
         this._type = type;
         this._url = {
             trending: 'http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC',
@@ -34,6 +39,8 @@ class Giphy {
             thanks: 'http://api.giphy.com/v1/gifs/search?q=thanks&api_key=dc6zaTOxFJmzC',
             yes: 'http://api.giphy.com/v1/gifs/search?q=yes&api_key=dc6zaTOxFJmzC'
         };
+
+        this.setRating();
     }
 
     getGifs(): Promise<object> {
@@ -88,6 +95,12 @@ class Giphy {
                 }
                 resolve(filePath);
             });
+        });
+    }
+
+    setRating(): void {
+        Object.keys(this._url).forEach((url) => {
+            this._url[url] = `${this._url[url]}&rating=${this._rating}`;
         });
     }
 

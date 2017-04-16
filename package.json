@@ -37,6 +37,17 @@
   ],
   "main": "./out/src/main",
   "contributes": {
+    "configuration": {
+        "type": "object",
+        "title": "GIPHY configuration",
+        "properties": {
+            "giphy.rating": {
+                "type": "string",
+                "default": "pg-13",
+                "description": "Specify the rating you would like to use for GIPHY results."
+            }
+        }
+    },
     "commands": [
       {
         "command": "giphy.trending",
