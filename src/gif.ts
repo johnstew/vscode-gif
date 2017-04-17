@@ -101,7 +101,6 @@ class Gif {
     setRating(): void {
         Object.keys(this._url).forEach((url) => {
             this._url[url] = `${this._url[url]}&rating=${this._rating}`;
-            console.log(this._url[url]);
         });
     }
 
