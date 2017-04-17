@@ -1,11 +1,15 @@
 {
   "name": "gif",
-  "displayName": "gif",
+  "displayName": "GIF",
   "description": "Easily grab a gif from within VS Code to add your to docs, presentations, etc.",
   "version": "0.0.1",
-  "publisher": "jstewart",
+  "publisher": "John Stewart",
   "engines": {
     "vscode": "^1.11.0"
+  },
+  "galleryBanner": {
+      "color": "#5c2d91",
+      "theme": "dark"
   },
   "categories": [
     "Other"
