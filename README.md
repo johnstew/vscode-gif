@@ -2,6 +2,8 @@
 
 Easily grab a gif from within VS Code to add your to docs, presentations, etc.
 
+![example gif](https://media.giphy.com/media/xUPGctcOx81qzIK04o/giphy.gif)
+
 ## Features
 
 This extension comes with a predefined set of queries that are used to search Giphy. See below:
