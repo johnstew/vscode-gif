@@ -3,7 +3,7 @@
   "displayName": "GIF",
   "description": "Easily grab a gif from within VS Code to add your to docs, presentations, etc.",
   "version": "0.0.1",
-  "publisher": "John Stewart",
+  "publisher": "johnstew",
   "engines": {
     "vscode": "^1.11.0"
   },
