@@ -11,7 +11,7 @@ function preview(type): void {
     const gif = new Gif(type);
     gif.generatePage()
         .then((pagePath) => {
-            const pageUri = vscode.Uri.parse(`file://${pagePath}`);
+            const pageUri = vscode.Uri.file(pagePath);
             cache[pagePath] = true;
             return vscode.commands.executeCommand('vscode.previewHtml', pageUri);
         })
